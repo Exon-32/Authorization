@@ -117,15 +117,20 @@ $result = $conn->query($sql);
         <div class="dashboard">
             <div class="dashboard-item">
                 <h3 class="heat1"> Users</h3>
-                <p>100</p>
+                <p><?php
+                $dataSql = "SELECT * FROM users WHERE $userid = user_id "; 
+                $dataResult = $conn->query($dataSql); 
+                        
+                        ?></p>
             </div>
             <div class="dashboard-item">
                 <h3>New Entries</h3>
-                <p>10</p>
+                <p>
+                    </p>
             </div>
             <div class="dashboard-item">
-                <h3>Revenue</h3>
-                <p>$1000</p>
+                <h3>Cost</h3>
+                <p>Rs100</p>
             </div>
         </div>
 
